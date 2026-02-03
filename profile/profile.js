@@ -1,27 +1,34 @@
 import {fetchGet} from '../fetch.js'
 
+const btnExit = document.getElementById('logoutBtn');
+btnExit.addEventListener('click',()=>{
+    window.location.assign('/login/index.html');
+})
+
+
+
 const id = sessionStorage.getItem('id');
 const name = document.getElementById('profileName');
 const email = document.getElementById('profileEmail');
-let suma = 0
-let sumaCompleted = 0
+let add = 0
+let addCompleted = 0
 fetchGet('task')
 .then(ele =>{
     ele.forEach(element => {
         if(element.workerId == id){
-            suma = suma + 1
-            console.log(suma)
+            add = add + 1
+            console.log(add)
 
 
 
         }else if (element.status == "Completed")
-            sumaCompleted = sumaCompleted + 1
+            addCompleted = addCompleted + 1
         
     });
-    const tareas = document.getElementById('tasksCount');
-    const tareasCompleted = document.getElementById('doneCount')
-    tareas.textContent = suma;
-    tareasCompleted.textContent = sumaCompleted;
+    const tasks = document.getElementById('tasksCount');
+    const tasksCompleted = document.getElementById('doneCount')
+    tasks.textContent = add;
+    tasksCompleted.textContent = addCompleted;
 })
 
 fetchGet('users')
