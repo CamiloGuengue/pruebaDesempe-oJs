@@ -1,0 +1,58 @@
+:root {
+      --azul-pastel: #AED9E0;
+      --azul-claro: #B8E6F0;
+      --azul-suave: #A3DFFA;
+      --azul-principal: #4A90E2;
+  }
+
+  body {
+      background: linear-gradient(135deg, var(--azul-pastel), var(--azul-claro));
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .login-card {
+      box-shadow: 0 25px 50px rgba(74, 144, 226, 0.3) !important;
+      border-radius: 25px;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      max-width: 420px;
+  }
+
+  .btn-azul {
+      background: linear-gradient(45deg, var(--azul-suave), var(--azul-principal));
+      border: none;
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
+      transition: all 0.3s ease;
+  }
+
+  .btn-azul:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(74, 144, 226, 0.4);
+      color: white;
+  }
+
+  .form-control {
+      border-radius: 15px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      padding: 15px 20px;
+      font-size: 1.05rem;
+      background: rgba(255, 255, 255, 0.95);
+  }
+
+  .form-control:focus {
+      border-color: var(--azul-principal);
+      box-shadow: 0 0 0 0.3rem rgba(163, 223, 250, 0.3);
+      background: white;
+  }
+
+  .logo-circle {
+      background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+      backdrop-filter: blur(10px);
+  }
+
+  h3 {
+      color: var(--azul-principal) !important;
+  }

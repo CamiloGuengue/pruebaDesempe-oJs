@@ -1,0 +1,28 @@
+        :root {
+            --azul-pastel: #AED9E0;
+            --azul-principal: #4A90E2;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f8f9fa, var(--azul-pastel));
+            min-height: 100vh;
+        }
+
+        .profile-card {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 25px;
+            border: none;
+        }
+
+        .avatar-lg {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-profile {
+            border-radius: 25px;
+            font-weight: 500;
+        }

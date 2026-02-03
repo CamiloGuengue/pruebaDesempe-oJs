@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="./assets/image/logo.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="./adminStyle.css">
+    <title>Home</title>
+</head>
+
+<body>
+
+    <header class="header-container d-flex">
+        <div class="row w-100">
+            <div class="col-lg-6 text-lg-start text-center">
+                <h2 id="greeting">Hello, USER</h2>
+            </div>
+
+            <div class="col-lg-6 text-lg-end text-center">
+                <!-- Logout con id -->
+                <a href="#" id="logoutBtn" class="sidebar-action text-danger">
+                    <i class="bi bi-box-arrow-left" alt="Log Out"></i>
+                    Log Out
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-fluid px-lg-4 py-4">
+        <div class="row g-4">
+
+            <aside class="col-lg-3">
+                <div class="sidebar sticky-top" style="top: 2rem;">
+
+                    <!-- Edit perfil con onclick -->
+                    <button class="create-idea-btn mb-4" id="btnDelete">
+                        <i class="fas fa-plus me-2"></i>Finish Task
+                    </button>
+                    <a href="../profile/profile.html" class="nav-link">
+                    <i class="bi bi-person me-1"></i>Perfil
+                    </a>
+
+                    <div class="filter-section">
+                        <ul class="list-group list-group-flush hashtag-filters rounded shadow-sm"
+                            style="max-height: 200px; overflow-y: auto;"></ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!--Matchs-->
+            <section class="col-lg-6 ">
+                <div class="feed match">
+                    <h3 class="column-name mb-4">Home</h3>
+                </div>
+            </section>
+
+            <!--Card User-->
+            <aside class="col-lg-3 user-card">
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- MODAL EDIT PROFILE -->
+    <div class="modal fade" id="ideaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Choose the task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="editProfileForm">
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label class="form-label">Task Title</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+
+                            <select id="rol-sign" class="inputs mb-3 form-select" required>
+                                <option value="" disabled selected>Category</option>
+                                <option value="1">Mathematics</option>
+                                <option value="2">History</option>
+                                <option value="3">Computer Sciencie</option>
+                            </select>
+
+                            <select id="openWork" class="inputs mb-3 form-select" required>
+                                <option value="" disabled selected>Priority</option>
+                                <option value="1">Low</option>
+                                <option value="1">Medium</option>
+                                <option value="2">High</option>
+                            </select>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Status</label>
+                                <select class="form-select" id="jobType">
+                                    <option value="1">Pending</option>
+                                    <option value="2">In Progress</option>
+                                    <option value="3">Completed</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Description</label>
+                                <textarea class="form-control" id="description" rows="3"></textarea>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Due Date</label>
+                                <input type="date" class="form-control" id="contact">
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <!-- type button para no recargar form -->
+                    <button type="button" class="btn btn-primary" id="saveProfile">Save task</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="changeStateModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">New Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="editProfileForm">
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label class="form-label">Task Title</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+
+                            <select id="rol-sign" class="inputs mb-3 form-select" required>
+                                <option value="" disabled selected>Category</option>
+                                <option value="1">Mathematics</option>
+                                <option value="2">History</option>
+                                <option value="3">Computer Sciencie</option>
+                            </select>
+
+                            <select id="openWork" class="inputs mb-3 form-select" required>
+                                <option value="" disabled selected>Priority</option>
+                                <option value="1">Low</option>
+                                <option value="1">Medium</option>
+                                <option value="2">High</option>
+                            </select>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Status</label>
+                                <select class="form-select" id="jobType">
+                                    <option value="1">Pending</option>
+                                    <option value="2">In Progress</option>
+                                    <option value="3">Completed</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Description</label>
+                                <textarea class="form-control" id="description" rows="3"></textarea>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Due Date</label>
+                                <input type="date" class="form-control" id="contact">
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <!-- type button para no recargar form -->
+                    <button type="button" class="btn btn-primary" id="saveProfile">Save task</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../fetch.js"></script>
+    <script type="module" src="user.js"></script>
+</body>
+
+</html>

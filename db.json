@@ -1,0 +1,71 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Super Admin",
+      "email": "admin@gmail.com",
+      "password": "123",
+      "category": "2",
+      "profile": "1",
+      "contact": "2",
+      "linkedin": "asdasdasd",
+      "position_id": "2026-02-11"
+    },
+    {
+      "id": "2",
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "3",
+      "name": "camilo",
+      "email": "perreo@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "4",
+      "name": "Jefecito",
+      "email": "a@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "task": [
+    {
+      "title": "js job",
+      "category": "Mathematics",
+      "priority": "Medium",
+      "status": "Pending",
+      "description": "LOREM",
+      "workerId": "2",
+      "id": "58fe"
+    },
+    {
+      "id": "e449",
+      "title": "job",
+      "category": "History",
+      "priority": "Medium",
+      "status": "Completed",
+      "description": "lorem",
+      "workerId": "3"
+    },
+    {
+      "id": "5a2a",
+      "title": "job 4",
+      "category": "Mathematics",
+      "priority": "Medium",
+      "status": "Completed",
+      "description": "lorem",
+      "workerId": "4"
+    },
+    {
+      "id": "3fe0",
+      "title": "sdasdasd",
+      "category": "Computer Sciencie",
+      "priority": "Medium",
+      "status": "Completed",
+      "description": "lorem2",
+      "workerId": "4"
+    }
+  ]
+}
